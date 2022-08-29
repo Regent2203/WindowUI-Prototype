@@ -1,4 +1,4 @@
-﻿using UI.Configs;
+﻿using Configs;
 using UnityEditor;
 
 [CustomPropertyDrawer(typeof(WindowConfig.WindowDictionary))]

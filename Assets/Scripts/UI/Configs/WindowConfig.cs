@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UI.Windows;
 
-namespace UI.Configs
+namespace Configs
 {
     public class WindowConfig : ScriptableObject
     {
@@ -10,6 +10,7 @@ namespace UI.Configs
         
         [SerializeField]
         private WindowDictionary _config = new WindowDictionary();
+
 
         public BaseWindow TryGetWindow(WndId wndId)
         {

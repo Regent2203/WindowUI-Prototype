@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: WindowConfig
   m_EditorClassIdentifier: 
   _config:
-    m_keys: 01000000
+    m_keys: 0000000001000000020000000300000004000000
     m_values:
-    - {fileID: 3471161949575738997, guid: 3d92dd5995e8984498c7dff014e32216, type: 3}
+    - {fileID: 2353457807015582060, guid: 47cdaef8cdefeb54e9f6a9851cd7ed96, type: 3}
+    - {fileID: 1720386425209927385, guid: 3d92dd5995e8984498c7dff014e32216, type: 3}
+    - {fileID: -781173115241349747, guid: 0c2267632a4466f4ebb9e5e50fa5f30e, type: 3}
+    - {fileID: -8853293240903844404, guid: 9593462b206d2424181b7bccf4dcc59a, type: 3}
+    - {fileID: 5604693236364810077, guid: 152ac36ed56e0a747b78083ed0bece20, type: 3}

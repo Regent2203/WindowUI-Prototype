@@ -1,4 +1,4 @@
-﻿using UI.Configs;
+﻿using Configs;
 using UnityEngine;
 using UI.Windows;
 
@@ -6,13 +6,16 @@ namespace Model
 {
     public class DataModel 
     {
-        private WindowManager _windowManager;
+        public SettingsModel SettingsModel { get; protected set; }
+        public MessagesModel MessagesModel { get; protected set; }
+        public ShopModel ShopModel { get; protected set; }
 
-        public DataModel(WindowConfig windowConfig, Canvas canvas)
+
+        public DataModel()
         {
-            _windowManager = new WindowManager(windowConfig, canvas.transform);
-
-            _windowManager.ShowWindow(WndId.Main);
+            SettingsModel = new SettingsModel();
+            MessagesModel = new MessagesModel();
+            ShopModel = new ShopModel();
         }
     }
 }

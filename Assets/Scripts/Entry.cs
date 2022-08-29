@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
-using UI.Configs;
+using Configs;
+using UI.Windows;
 using Model;
 
 public class Entry : MonoBehaviour
@@ -8,13 +9,6 @@ public class Entry : MonoBehaviour
     [Header("Configs")]
     [SerializeField]
     private WindowConfig _windowConfig;
-
-    [Space]
-    [SerializeField]
-    private Canvas _canvas;
-
-
-    private DataModel _dataModel;
 
 
     private void Awake()
@@ -24,15 +18,17 @@ public class Entry : MonoBehaviour
             Debug.LogWarning($"{nameof(Entry)} gameobject has unassigned {nameof(WindowConfig)} link, please fix", this);
             _windowConfig = AssetDatabase.LoadAssetAtPath<WindowConfig>("Assets/Configs/WindowConfig.asset");
         }
+
+        var dataModel = new DataModel();
+        var windowManager = new WindowManager(_windowConfig);
+
+        BaseWindow.DataModel = dataModel;
+        BaseWindow.WindowManager = windowManager;
     }
 
     private void Start()
     {
-        Init();
-    }
-
-    private void Init()
-    {
-        _dataModel = new DataModel(_windowConfig, _canvas);
+        //Start
+        BaseWindow.WindowManager.ShowWindow(WndId.Preloader);
     }
 }
